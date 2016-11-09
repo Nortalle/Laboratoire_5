@@ -29,7 +29,7 @@ using namespace std;
  */
 bool estBissextile(const int annee) {
 
-   return ((annee % 4 == 0 && annee % 100 != 0) || annee % 400 == 0);
+   return bool((annee % 4 == 0 && annee % 100 != 0) || annee % 400 == 0);
 }
 
 int nbreJour(const int mois,const int annee) {
@@ -68,7 +68,7 @@ bool veutRecommencer() {
 
    } while ((recommencer != OUI) && (recommencer != NON));
 
-   return recommencer == OUI;
+   return bool(recommencer == OUI);
 }
 
 void afficherMois(const int mois) {
@@ -109,7 +109,11 @@ void fin() {
 int main() {
 
    enum class MOIS {
-      JANVIER = 1
+      JANVIER = 1,
+      FEVRIER = 2,
+      MARS    = 3,
+      AVRIL   = 4,
+      MAI     = 5
    };
 
    const int ANNEE_MIN = 1900;
