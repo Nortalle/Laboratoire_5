@@ -27,12 +27,12 @@ using namespace std;
     @param L'année dont nous voulons savoir la bissextilité
     @return Si l'annee est bissextile ou non
  */
-bool estBissextile(int annee) {
+bool estBissextile(const int annee) {
 
    return ((annee % 4 == 0 && annee % 100 != 0) || annee % 400 == 0);
 }
 
-int nbreJour(int mois, int annee) {
+int nbreJour(const int mois,const int annee) {
 
    switch (mois) {
       case  1:
@@ -71,26 +71,26 @@ bool veutRecommencer() {
    return recommencer == OUI;
 }
 
-void afficherMois(int mois) {
+void afficherMois(const int mois) {
 
    switch (mois) {
-      case 1: cout << "Janvier";
+      case  1: cout << "Janvier";
          break;
-      case 2: cout << "Fevrier";
+      case  2: cout << "Fevrier";
          break;
-      case 3: cout << "Mars";
+      case  3: cout << "Mars";
          break;
-      case 4: cout << "Avril";
+      case  4: cout << "Avril";
          break;
-      case 5: cout << "Mai";
+      case  5: cout << "Mai";
          break;
-      case 6: cout << "Juin";
+      case  6: cout << "Juin";
          break;
-      case 7: cout << "Juillet";
+      case  7: cout << "Juillet";
          break;
-      case 8: cout << "Aout";
+      case  8: cout << "Aout";
          break;
-      case 9: cout << "Septembre";
+      case  9: cout << "Septembre";
          break;
       case 10: cout << "Octobre";
          break;
