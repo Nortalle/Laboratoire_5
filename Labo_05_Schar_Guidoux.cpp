@@ -29,7 +29,7 @@ using namespace std;
  */
 bool estBissextile(const int annee) {
 
-   return bool((annee % 4 == 0 && annee % 100 != 0) || annee % 400 == 0);
+   return ((annee % 4 == 0 && annee % 100 != 0) || annee % 400 == 0);
 }
 
 int nbreJour(const int mois,const int annee) {
@@ -49,6 +49,8 @@ int nbreJour(const int mois,const int annee) {
       case 11: return 30;
 
       case  2: return estBissextile(annee) ? 29: 28;
+      
+      default: return -1;
    }
 }
 
@@ -68,7 +70,7 @@ bool veutRecommencer() {
 
    } while ((recommencer != OUI) && (recommencer != NON));
 
-   return bool(recommencer == OUI);
+   return recommencer == OUI;
 }
 
 void afficherMois(const int mois) {
@@ -108,12 +110,19 @@ void fin() {
 
 int main() {
 
-   enum class MOIS {
-      JANVIER = 1,
-      FEVRIER = 2,
-      MARS    = 3,
-      AVRIL   = 4,
-      MAI     = 5
+   enum class Mois {
+      JANVIER   =  1,
+      FEVRIER   =  2,
+      MARS      =  3,
+      AVRIL     =  4,
+      MAI       =  5,
+      JUIN      =  6,
+      JUILLET   =  7,
+      AOUT      =  8,
+      SEPTEMBRE =  9,
+      OCTOBRE   = 10,
+      NOVEMBRE  = 11,
+      DECEMBRE  = 12
    };
 
    const int ANNEE_MIN = 1900;
@@ -138,7 +147,7 @@ int main() {
 
       } while (!saisieOk);
 
-      cout << int(MOIS::JANVIER);
+      cout << int(Mois::JANVIER);
 
    } while (veutRecommencer());
 
