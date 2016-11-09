@@ -29,6 +29,8 @@ using namespace std;
 int main() {
 
    const char OUI = 'O';
+   
+   const char CUNNI = 'C';
    const char NON = 'N';
 
    const int ANNEE_MIN = 1900;
