@@ -111,6 +111,17 @@ bool veutRecommencer();
  */
 void fin();
 
+/**
+ * Fonction qui demande à l'utilisateur d'entrer une valeur dans une échelle donnée 
+ * en paramètre
+ * 
+ * @param 
+ * ANNEE_MIN : borne inférieure inclue
+ * @param
+ * ANNEE_MAX : borne supérieure inclue
+ * 
+ * @return l'annee entrée par l'utilisateur.
+ */
 int saisieAnnee(const int ANNEE_MIN, const int ANNEE_MAX);
 
 int main() {
@@ -157,7 +168,7 @@ int saisieAnnee(const int ANNEE_MIN, const int ANNEE_MAX){
    
       do {
          cout << endl << "Quelle annee ? [" << ANNEE_MIN
-                      << "-" << ANNEE_MAX
+                      << "-"                << ANNEE_MAX
                       << "] : ";
 
          if (!(saisieOk = (cin >> annee && ANNEE_MIN <= annee && annee <= ANNEE_MAX))) {
